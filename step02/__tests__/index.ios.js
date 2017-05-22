@@ -1,12 +1,11 @@
-import 'react-native';
 import React from 'react';
-import Index from '../index.ios.js';
+import { AppRegistry } from 'react-native';
+import Header from './src/components/header';
 
 // Note: test renderer must be required after react-native.
-import renderer from 'react-test-renderer';
+const App = () => (
+<Header headerText={'Shahrukh Haider'} />
 
-it('renders correctly', () => {
-  const tree = renderer.create(
-    <Index />
-  );
-});
+);
+
+AppRegistry.registerComponent('step02', () => App);
